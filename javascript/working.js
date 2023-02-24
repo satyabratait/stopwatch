@@ -7,11 +7,14 @@ let intervaldisplay = document.getElementById("interval");
 let seconds=0, minutes=0,hours=0,count=0;
 let counttimer=false;
 
+
+// start button
 start.addEventListener("click", (e) =>{
     counttimer = true;
     stopwatch();
 });
 
+// main function
 function stopwatch(){
     if (counttimer) {
         count++;
@@ -34,10 +37,12 @@ function stopwatch(){
     }
 }
 
+// pause button
 pause.addEventListener('click', function(){
     counttimer = false;
 });
 
+// reset button
 reset.addEventListener('click', function () {
     counttimer = false;
     count = 0;
@@ -49,6 +54,7 @@ reset.addEventListener('click', function () {
 
 });
 
+// interval button
 interval.addEventListener('click', function(){
     intervaldisplay.innerHTML += `<div class="timeinterval">${display.innerHTML}</div>`;
 });
